@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the Harvard-backed morning routine that helped one woman lose 143 lbs. See the simple method that burns fat efficiently without exercise or dieting.">
+  <title>Ground-Breaking Weight Loss Discovery | Harvard Research Reveals Simple Morning Routine</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: hsl(174, 62%, 47%);
+      --primary-foreground: hsl(0, 0%, 100%);
+      --coral: hsl(16, 100%, 66%);
+      --highlight-red: hsl(0, 84%, 60%);
+      --cream: hsl(39, 100%, 97%);
+      --gold: hsl(45, 93%, 47%);
+      --foreground: hsl(20, 14%, 4%);
+      --card: hsl(0, 0%, 100%);
+      --secondary-foreground: hsl(20, 5%, 35%);
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--cream);
+      color: var(--foreground);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      background-color: var(--primary);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--primary-foreground);
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+      .header h1 {
+        font-size: 1.875rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .header h1 {
+        font-size: 2.25rem;
+      }
+    }
+
+    /* Video Section */
+    .video-section {
+      background-color: var(--coral);
+      padding: 2rem 1rem;
+    }
+
+    .video-container {
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+
+    .video-link {
+      position: relative;
+      display: block;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 4px solid var(--card);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .video-link img {
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .video-link:hover .play-overlay {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .play-button {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      padding: 1rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .video-link:hover .play-button {
+      background-color: var(--card);
+      transform: scale(1.1);
+    }
+
+    @media (min-width: 768px) {
+      .play-button {
+        padding: 1.5rem;
+      }
+    }
+
+    .play-icon {
+      width: 3rem;
+      height: 3rem;
+      fill: var(--primary);
+      color: var(--primary);
+    }
+
+    @media (min-width: 768px) {
+      .play-icon {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    .weight-banner {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .weight-banner p {
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: var(--gold);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    @media (min-width: 768px) {
+      .weight-banner p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .see-how-text {
+      text-align: center;
+      color: var(--secondary-foreground);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.125rem;
+      margin-top: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Offer Section */
+    .offer-section {
+      background-color: var(--cream);
+      padding: 2rem 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .offer-section {
+        padding: 3rem 1rem;
+      }
+    }
+
+    .offer-container {
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+
+    .main-headline {
+      background-color: var(--highlight-red);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 768px) {
+      .main-headline {
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .main-headline h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-foreground);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    @media (min-width: 768px) {
+      .main-headline h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .main-headline h2 {
+        font-size: 1.875rem;
+      }
+    }
+
+    .description-box {
+      background-color: hsl(0, 0%, 96%);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .description-box {
+        padding: 2rem;
+      }
+    }
+
+    .description-intro {
+      font-size: 1rem;
+      color: var(--foreground);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    @media (min-width: 768px) {
+      .description-intro {
+        font-size: 1.125rem;
+      }
+    }
+
+    .benefits-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: var(--foreground);
+    }
+
+    @media (min-width: 768px) {
+      .benefit-item {
+        font-size: 1.125rem;
+      }
+    }
+
+    .x-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--highlight-red);
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) {
+      .x-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    .cta-container {
+      text-align: center;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    @media (min-width: 768px) {
+      .cta-button {
+        font-size: 1.25rem;
+        padding: 1.25rem 3rem;
+      }
+    }
+
+    .cta-button:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 10px rgba(45, 212, 191, 0);
+      }
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--primary);
+      padding: 1.5rem 1rem;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      max-width: 56rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-links {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-foreground);
+    }
+
+    .footer-disclaimer {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Ground-Breaking New Weightloss Discovery...</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Video Section -->
+    <section class="video-section">
+      <div class="video-container">
+        <a href="https://1e38caijrkn96c28kd0i7g2l17.hop.clickbank.net" target="_blank" rel="noopener noreferrer" class="video-link">
+          <img src="https://cdn.lovable.us/giteditor/blob%2F50d0ff40-2a19-43ae-adcb-9d73ddb05f5e%2F5a31e8e2-7b8e-468a-a9d3-b920ee3e39b9" alt="Weight loss transformation journey showing progress over 6 months - Lost 20 lbs in 2 months, Lost 48 lbs in 4 months, Lost 75 lbs in 6 months" />
+          <div class="play-overlay">
+            <div class="play-button">
+              <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        
+        <div class="weight-banner">
+          <p>And a massive 143 lbs in total.</p>
+        </div>
+
+        <p class="see-how-text">See How She Did It</p>
+      </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offer-section">
+      <div class="offer-container">
+        <div class="main-headline">
+          <h2>HARVARD RESEARCH SHOWS A SIMPLE MORNING ROUTINE THAT HELPS THE BODY BURN FAT MORE EFFICIENTLY IN JUST DAYS…</h2>
+        </div>
+
+        <div class="description-box">
+          <p class="description-intro">
+            This New Harvard Research Helped College Student Megan Dissolve Slabs of Wobbly Fat From Her Belly, Butt, Hips, Thighs & Face <strong>without:</strong>
+          </p>
+
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <svg class="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span>Strenuous Exercise</span>
+            </li>
+            <li class="benefit-item">
+              <svg class="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span>Following a Diet</span>
+            </li>
+            <li class="benefit-item">
+              <svg class="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span>Sacrificing Her Favorite Foods</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cta-container">
+          <a href="https://1e38caijrkn96c28kd0i7g2l17.hop.clickbank.net" target="_blank" rel="noopener noreferrer" class="cta-button">
+            See How She Did It
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-links">
+        © 2025 All Rights Reserved | 
+        <a href="#">Privacy Policy</a>
+        <span> | </span>
+        <a href="#">Terms of Service</a>
+      </p>
+      <p class="footer-disclaimer">
+        Results may vary. Consult your physician before starting any weight loss program.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
