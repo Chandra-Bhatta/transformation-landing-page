@@ -5,7 +5,12 @@ const VideoSection = () => {
   return (
     <section className="bg-coral py-8 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-card cursor-pointer group">
+        <a 
+          href="https://1e38caijrkn96c28kd0i7g2l17.hop.clickbank.net" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="relative rounded-lg overflow-hidden shadow-2xl border-4 border-card cursor-pointer group block"
+        >
           <img
             src={transformationImage}
             alt="Weight loss transformation journey showing progress over 6 months - Lost 20 lbs in 2 months, Lost 48 lbs in 4 months, Lost 75 lbs in 6 months"
@@ -14,14 +19,14 @@ const VideoSection = () => {
           />
           {/* Play Button Overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-foreground/10 group-hover:bg-foreground/20 transition-colors duration-300">
-            <button
-              className="bg-card/90 hover:bg-card rounded-full p-4 md:p-6 shadow-2xl transition-all duration-300 group-hover:scale-110"
+            <div
+              className="bg-card/90 group-hover:bg-card rounded-full p-4 md:p-6 shadow-2xl transition-all duration-300 group-hover:scale-110"
               aria-label="Play video - See how she did it"
             >
               <Play className="w-12 h-12 md:w-16 md:h-16 text-primary fill-primary" />
-            </button>
+            </div>
           </div>
-        </div>
+        </a>
         
         {/* Total weight loss banner */}
         <div className="mt-4 text-center">
