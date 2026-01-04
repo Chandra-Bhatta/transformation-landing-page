@@ -49,9 +49,14 @@ const OfferSection = () => {
 
           {/* CTA Button */}
           <div className="text-center">
-            <button className="bg-primary hover:bg-teal-dark text-primary-foreground font-oswald text-xl md:text-2xl font-bold py-4 px-8 md:px-12 rounded-lg shadow-xl transition-all duration-300 hover:scale-105 animate-pulse-slow uppercase tracking-wide">
+            <a 
+              href="https://1e38caijrkn96c28kd0i7g2l17.hop.clickbank.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary hover:bg-teal-dark text-primary-foreground font-oswald text-xl md:text-2xl font-bold py-4 px-8 md:px-12 rounded-lg shadow-xl transition-all duration-300 hover:scale-105 animate-pulse-slow uppercase tracking-wide"
+            >
               See How She Did It
-            </button>
+            </a>
           </div>
         </div>
       </div>
